@@ -24,8 +24,8 @@ public abstract class Plane {
     public String landing(){
         return "We are landing!Thank God we are still alive";
     }
-    public int moveUP(){
-        return ControlSystem.moveUP();
+    public int moveUp(){
+        return ControlSystem.moveUp();
     }
     public int moveDown(){
         return ControlSystem.moveDown();
