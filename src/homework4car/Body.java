@@ -1,28 +1,28 @@
-//package homework4car;
-//
-//public class Body extends Car{
-//
-//    private int Length = 100;
-//
-//    public Body(int Length){
-//        this.Length = Length;
-//    }
-//
-//    public int getLength() {
-//        return Length;
-//    }
-//
-//    public void setLength(int length) {
-//        Length = length;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return "Body{" +
-//                "Length=" + Length +
-//                '}';
-//    }
-//    public int Lengthplus(){
-//        return Length*3;
-//    }
-//}
+package homework4car;
+
+public class Body {
+
+    private int Length = 10;
+
+    public Body(int Length){
+        this.Length = Length;
+    }
+
+    public int getBody() {
+        return Length;
+    }
+
+    public void setBody(int length) {
+        Length = length;
+    }
+
+    @Override
+    public String toString() {
+        return "Body{" +
+                "Length=" + Length +
+                '}';
+    }
+    public int Bodyplus(){
+        return Length*3;
+    }
+}
