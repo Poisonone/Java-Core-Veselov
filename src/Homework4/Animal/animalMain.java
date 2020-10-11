@@ -1,4 +1,4 @@
-package homework4animal;
+package Homework4.Animal;
 
 public class animalMain {
     public static void main(String[] args) {

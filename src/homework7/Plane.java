@@ -4,6 +4,7 @@ public abstract class Plane {
     public int weight;
     public int length;
     public int width;
+    ControlSystem ControlSystem = new ControlSystem();
 
     public Plane(){
 
@@ -23,9 +24,6 @@ public abstract class Plane {
     public String landing(){
         return "We are landing!Thank God we are still alive";
     }
-
-    ControlSystem ControlSystem = new ControlSystem();
-
     public int moveUP(){
         return ControlSystem.moveUP();
     }

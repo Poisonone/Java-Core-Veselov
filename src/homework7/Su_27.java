@@ -24,10 +24,4 @@ public class Su_27 extends Plane implements AdditionalPossibilities{
         this.maxSpeed = maxSpeed;
         this.color = color;
     }
-    //    public Su_27(int maxSpeed,String color){
-//        this.maxSpeed = maxSpeed;
-//        this.color = color;
-//    }
-
-
 }

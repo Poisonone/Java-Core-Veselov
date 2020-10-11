@@ -1,4 +1,4 @@
-package homework4robot;
+package Homework4.Robot;
 
 public class CoffeeRobot extends Robot {
     @Override

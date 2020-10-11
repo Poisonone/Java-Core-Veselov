@@ -1,4 +1,4 @@
-package homework4animal;
+package Homework4.Animal;
 
 public class animal {
     private String name;
