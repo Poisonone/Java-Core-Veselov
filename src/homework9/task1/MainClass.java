@@ -45,8 +45,7 @@ public class MainClass {
                 // Перевірка чи збігається введена назва з назвою константи з Enum
                 if (input.equalsIgnoreCase(item.name())) {
                     System.out.println("U've divined it");
-                }
-                else{
+                } else {
                     throw new WrongInputParameter("Unfair play");
                 }
             }
@@ -63,6 +62,8 @@ public class MainClass {
                 // Перевірка чи збігається введена назва з назвою константи з Enum
                 if (input.equalsIgnoreCase(item.name())) {
                     System.out.println(item.seasons);
+                } else {
+                    throw new WrongInputParameter("Unfair play");
                 }
             }
 
@@ -82,6 +83,8 @@ public class MainClass {
                 if (input.equalsIgnoreCase(item.name())) {
                     // Збереження значень enum в змінній saved
                     saved = item;
+                } else {
+                    throw new WrongInputParameter("Unfair play");
                 }
             }
             /*
@@ -107,6 +110,8 @@ public class MainClass {
                 // Перевірка чи збігається введена назва з назвою константи з Enum
                 if (input.equalsIgnoreCase(item.name())) {
                     saved = item;
+                } else {
+                    throw new WrongInputParameter("Unfair play");
                 }
             }
             /*
@@ -124,13 +129,15 @@ public class MainClass {
             input = sc.nextLine();
             // Перевірка чи збігається введена назва з назвою константи з Enum
             if (input.equalsIgnoreCase("winter")) {
-                System.out.println("Spring");
+                System.out.println("Autumn");
             } else if (input.equalsIgnoreCase("spring")) {
                 System.out.println("Summer");
             } else if (input.equalsIgnoreCase("summer")) {
                 System.out.println("Autumn");
             } else if (input.equalsIgnoreCase("Autumn")) {
                 System.out.println("winter");
+            } else {
+                throw new WrongInputParameter("Unfair play");
             }
         } else if (menu.equals("6")) {
             System.out.println("U've typed '6' ");
@@ -138,14 +145,19 @@ public class MainClass {
             // Присвоєння змінній scanner
             input = sc.nextLine();
             // Перевірка чи збігається введена назва з назвою константи з Enum
-            if (input.equalsIgnoreCase("winter")) {
-                System.out.println("Autumn");
-            } else if (input.equalsIgnoreCase("spring")) {
-                System.out.println("Winter");
-            } else if (input.equalsIgnoreCase("summer")) {
-                System.out.println("Spring");
-            } else if (input.equalsIgnoreCase("Autumn")) {
-                System.out.println("Summer");
+            for (Months item : Months.values()) {
+                if (input.equalsIgnoreCase("winter")) {
+                    System.out.println("Autumn");
+                    System.out.println(item.getSeasons().values());
+                } else if (input.equalsIgnoreCase("spring")) {
+                    System.out.println("Winter");
+                } else if (input.equalsIgnoreCase("summer")) {
+                    System.out.println("Spring");
+                } else if (input.equalsIgnoreCase("Autumn")) {
+                    System.out.println("Summer");
+                } else {
+                    throw new WrongInputParameter("Unfair play");
+                }
             }
         } else if (menu.equals("7")) {
             System.out.println("U've typed '7' ");
@@ -187,6 +199,8 @@ public class MainClass {
                     } else if (item.days % 2 != 0) {
                         System.out.println("Місяць має непарну кількість днів");
                     }
+                } else {
+                    throw new WrongInputParameter("Unfair play");
                 }
             }
         }
