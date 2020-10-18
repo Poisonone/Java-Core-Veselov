@@ -1,4 +1,4 @@
-package Homework8.task1;
+package homework8.task1;
 
 public enum Seasons {
 

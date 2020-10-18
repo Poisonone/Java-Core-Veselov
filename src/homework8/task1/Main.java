@@ -1,4 +1,4 @@
-package Homework8.task1;
+package homework9.task1;
 
 import java.util.Scanner;
 
@@ -106,7 +106,6 @@ public class Main {
 
                 }
             }
-
         } else if (menu.equals("8")) {
             System.out.println("U've typed '8' ");
             for (Months item : Months.values()) {

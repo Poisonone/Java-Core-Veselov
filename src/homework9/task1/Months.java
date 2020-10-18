@@ -1,4 +1,13 @@
-package Homework8.task1;
+/**
+ * Copyright homework 2020
+ */
+package homework9.task1;
+
+/**
+ * @author FreeDmaN
+ * @version 0.1
+ * @since jdk 1.7
+ */
 
 public enum Months {
 
@@ -14,27 +23,56 @@ public enum Months {
     OCTOBER(31, Seasons.AUTUMN),
     NOVEMBER(30, Seasons.AUTUMN),
     DECEMBER(31, Seasons.WINTER);
-
+    // дні
     int days;
+    //сезони
     Seasons seasons;
 
+    //constructor
     Months(int days, Seasons seasons) {
         this.days = days;
         this.seasons = seasons;
     }
 
+    /**
+     * getter for days
+     *
+     * @return days
+     * @author FreDmaN
+     * @see - basics of java
+     */
     public int getDays() {
         return days;
     }
 
+    /**
+     * setter for days
+     *
+     * @param days
+     * @author FreDmaN
+     * @see - basics of java
+     */
     public void setDays(int days) {
         this.days = days;
     }
 
+    /**
+     * getter for seasons
+     *
+     * @return days
+     * @author FreDmaN
+     * @see - basics of java
+     */
     public Seasons getSeasons() {
         return seasons;
     }
 
+    /**
+     * setter for days
+     * @param seasons
+     * @author FreDmaN
+     * @see - basics of java
+     */
     public void setSeasons(Seasons seasons) {
         this.seasons = seasons;
     }
