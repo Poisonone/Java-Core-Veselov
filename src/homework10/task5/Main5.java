@@ -1,25 +1,15 @@
 package homework10.task5;
 
+
+import homework10.task6.Main6;
+
 public class Main5 {
     public static void main(String... strings) {
-        String str = "Me you . You you you . Me me . You you me і.";
-        String[] words = str.split(" ");
+        String str = "Me you .You you you .Me me .You you me і.";
         String[] sentences = str.split("\\.");
-        int finalCount = 0;
-        int tempCount = 0;
-        String mostlyUsedWord = null;
-        for (String word : words) {
-            tempCount = 0;
-            for (String w : words) {
-                if (word.equalsIgnoreCase(w)) {
-                    tempCount++;
-                }
-            }
-            if (tempCount >= finalCount) {
-                finalCount = tempCount;
-                mostlyUsedWord = word;
-            }
+        for (String sentence : sentences) {
+            Main6.findWord(sentence);
         }
-        System.out.println("mostlyUsedWord = " + "'" + mostlyUsedWord + "'" + " quantity = " + finalCount);
     }
+
 }
