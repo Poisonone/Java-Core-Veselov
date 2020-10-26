@@ -1,9 +1,9 @@
 package Homework4.Car;
 
-public class Helm  {
+public class Helm {
     private int Diameter = 10;
 
-    public Helm(int Diameter){
+    public Helm(int Diameter) {
         this.Diameter = Diameter;
     }
 
@@ -14,9 +14,11 @@ public class Helm  {
     public void setHelm(int diameter) {
         Diameter = diameter;
     }
-    public int Diameterminus(){
-        return Diameter/2;
+
+    public int Diameterminus() {
+        return Diameter / 2;
     }
+
     @Override
     public String toString() {
         return "Helm{" +
