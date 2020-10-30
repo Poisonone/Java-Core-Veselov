@@ -57,7 +57,7 @@ public class Deputy extends Human {
         this.corrupt = corrupt;
     }
 
-    public int getBribesum() {
+    public int getBribeSum() {
         return bribesum;
     }
 
@@ -76,7 +76,9 @@ public class Deputy extends Human {
 
     public void giveABribe() {
 
-        if (corrupt == false) {
+        String isCorruptedString = sc.next();
+        boolean isCorruptedValue = Boolean.valueOf(isCorruptedString);
+        if (isCorruptedValue == false) {
             System.out.println("I'm not playing this game!");
         } else {
             System.out.println("Enter the sum of the bribe:");

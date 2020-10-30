@@ -9,9 +9,11 @@ public class Fraction {
     Deputy deputy;
     List<Deputy> deputies = new ArrayList<>();
     ListIterator<Deputy> iterator1 = deputies.listIterator();
-    ListIterator<Deputy> iterator2 = deputies.listIterator();
     Scanner sc = new Scanner(System.in);
     String name;
+
+    public Fraction() {
+    }
 
     public Fraction(String name) {
         this.name = name;
@@ -27,20 +29,20 @@ public class Fraction {
 
     public void newMember() {
         System.out.println("Enter the name");
-        String inputname = sc.nextLine();
+        String inputName = sc.nextLine();
         System.out.println("Enter the weight");
-        int inputweight = sc.nextInt();
+        int inputWeight = sc.nextInt();
         System.out.println("Enter the height");
-        int inputheight = sc.nextInt();
+        int inputHeight = sc.nextInt();
         System.out.println("Enter the age");
-        int inputage = sc.nextInt();
+        int inputAge = sc.nextInt();
         System.out.println("Enter the surname");
-        String inputsurname = sc.nextLine();
+        String inputSurname = sc.nextLine();
         System.out.println("Enter the sex");
-        String inputsex = sc.nextLine();
+        String inputSex = sc.nextLine();
         System.out.println("Is he corrupt?");
-        boolean ishecorrupt = sc.nextBoolean();
-        deputies.add(new Deputy(inputweight, inputheight, inputage, inputname, inputsurname, ishecorrupt, inputsex));
+        boolean isHeCorrupt = sc.nextBoolean();
+        deputies.add(new Deputy(inputWeight, inputHeight, inputAge, inputName, inputSurname, isHeCorrupt, inputSex));
 
     }
 
@@ -57,23 +59,23 @@ public class Fraction {
 
     public void showAllTheCorrupts() {
         for (Deputy i : deputies) {
-            if (deputy.isCorrupt() == true) {
+            if (deputy.corrupt == true) {
                 System.out.println(i);
             }
         }
     }
 
     public void showTheMostCorruptedGuy() {
+        int maxBribe = 0;
         for (Deputy i : deputies) {
-            if (deputy.getBribe() < deputy.getBribesum()) {
-                deputy.setBribe(deputy.bribesum);
+            if (maxBribe <= deputy.getBribeSum()) {
+                maxBribe = deputy.getBribeSum();
             }
             System.out.println(i);
         }
     }
 
     public void showAllTheDeputies() {
-        deputies.add(new Deputy(120, 140, 25, "Oleg", "Nazarov", false, "male"));
         for (Deputy i : deputies) {
             System.out.println(i);
 
@@ -85,4 +87,10 @@ public class Fraction {
         deputies.clear();
     }
 
+    @Override
+    public String toString() {
+        return "Fraction{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
