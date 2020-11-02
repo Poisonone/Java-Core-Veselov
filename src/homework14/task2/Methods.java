@@ -66,14 +66,14 @@ public class Methods {
     }
 
     public void filterByHeight() {
-        FilteredByHeight filteredByNameComparator = new FilteredByHeight();
-        Set<Commodity> set = new TreeSet<>(filteredByNameComparator);
+        FilteredByHeight filteredByHeightComparator = new FilteredByHeight();
+        Set<Commodity> set = new TreeSet<>(filteredByHeightComparator);
         System.out.println(set);
     }
 
     public void filterByLength() {
-        FilteredByLength filteredByNameComparator = new FilteredByLength();
-        Set<Commodity> set = new TreeSet<>(filteredByNameComparator);
+        FilteredByLength filteredByLengthComparator = new FilteredByLength();
+        Set<Commodity> set = new TreeSet<>(filteredByLengthComparator);
         System.out.println(set);
     }
 
