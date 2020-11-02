@@ -75,7 +75,7 @@ public class Parliament {
 
     }
 
-    public void ShowAllCorruptDeputies() {
+    public void showAllCorruptDeputies() {
         System.out.println("Enter the name of the fraction: ");
         String inputfrname = sc.nextLine();
         for (Fraction i : rada) {
@@ -87,7 +87,7 @@ public class Parliament {
         }
     }
 
-    public void ShowAllTheDeputies() {
+    public void showAllTheDeputies() {
         System.out.println("Enter the name of the fraction: ");
         String inputfrname = sc.nextLine();
         for (Fraction i : rada) {
