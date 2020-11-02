@@ -2,7 +2,7 @@ package homework11.task1;
 
 import java.util.*;
 
-public class Main {
+public class Main_hw11_task1 {
     public static void main(String[] args) {
 
         Integer[] array = new Integer[10];
