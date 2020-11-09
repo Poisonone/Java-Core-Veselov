@@ -2,87 +2,92 @@ package homework14.task2;
 
 import java.util.*;
 
-public class Methods {
+public class SetUtils {
     Scanner sc = new Scanner(System.in);
     Commodity commodity;
+    Set<Commodity> set;
 
+    public SetUtils(Set<Commodity> set) {
+        this.set = set;
+    }
 
-    public void addNewProduct() {
-        Set<Commodity> set = new TreeSet<>();
+    public Set addNewProduct() {
         System.out.println("Enter the name of the product");
-        String inputname = sc.nextLine();
+        String inputName = sc.nextLine();
         System.out.println("Enter the length of the product:");
-        int inputlength = sc.nextInt();
+        int inputLength = sc.nextInt();
         System.out.println("Enter the weight of the product:");
-        int inputweight = sc.nextInt();
+        int inputWeight = sc.nextInt();
         System.out.println("Enter the height of the product:");
-        int inputheight = sc.nextInt();
-        set.add(new Commodity(inputname, inputheight, inputweight, inputlength));
+        int inputHeight = sc.nextInt();
+        set.add(new Commodity(inputName, inputHeight, inputWeight, inputLength));
+        return set;
     }
 
-    public void removeTheProduct() {
-        Set<Commodity> set = new TreeSet<>();
+    public Set removeTheProduct() {
         Iterator value = set.iterator();
         System.out.println("Enter the name of the product u wanna switch: ");
-        String inputname = sc.nextLine();
+        String inputName = sc.nextLine();
         while (value.hasNext()) {
-            if (inputname.equalsIgnoreCase(commodity.getName())) {
+            if (inputName.equalsIgnoreCase(commodity.getName())) {
                 value.remove();
             }
         }
+        return set;
     }
 
-    public void switchTheProduct() {
-        Set<Commodity> set = new TreeSet<>();
+    public Set switchTheProduct() {
         Iterator value = set.iterator();
         System.out.println("Enter the name of the product u wanna switch: ");
-        String inputname1 = sc.nextLine();
+        String inputName1 = sc.nextLine();
         System.out.println("Enter the name of a new product");
-        String inputname = sc.nextLine();
+        String inputName = sc.nextLine();
         System.out.println("Enter the length a new product:");
-        int inputlength = sc.nextInt();
+        int inputLength = sc.nextInt();
         System.out.println("Enter the weight a new product:");
-        int inputweight = sc.nextInt();
+        int inputWeight = sc.nextInt();
         System.out.println("Enter the height a new product:");
-        int inputheight = sc.nextInt();
+        int inputHeight = sc.nextInt();
         while (value.hasNext()) {
-            if (inputname1.equalsIgnoreCase(commodity.getName())) {
+            if (inputName1.equalsIgnoreCase(commodity.getName())) {
                 value.remove();
-                set.add(new Commodity(inputname, inputheight, inputweight, inputlength));
+                set.add(new Commodity(inputName, inputHeight, inputWeight, inputLength));
+
             }
         }
+        return set;
     }
 
-    public void filterByName() {
+    public Set filterByName() {
+
         FilteredByName filteredByNameComparator = new FilteredByName();
         Set<Commodity> set = new TreeSet<>(filteredByNameComparator);
-        System.out.println(set);
+        return set;
     }
 
-    public void filterByWeight() {
+    public Set filterByWeight() {
         FilteredByWeight filteredByWeightComparator = new FilteredByWeight();
         Set<Commodity> set = new TreeSet<>(filteredByWeightComparator);
-        System.out.println(set);
+        return set;
     }
 
-    public void filterByHeight() {
+    public Set filterByHeight() {
         FilteredByHeight filteredByHeightComparator = new FilteredByHeight();
         Set<Commodity> set = new TreeSet<>(filteredByHeightComparator);
-        System.out.println(set);
+        return set;
     }
 
-    public void filterByLength() {
+    public Set filterByLength() {
         FilteredByLength filteredByLengthComparator = new FilteredByLength();
         Set<Commodity> set = new TreeSet<>(filteredByLengthComparator);
-        System.out.println(set);
+        return set;
     }
 
     public void findTheProduct() {
-        Set<Commodity> set = new TreeSet<>();
         System.out.println("Enter the name of the product u wanna find: ");
-        String inputname1 = sc.nextLine();
+        String inputName1 = sc.nextLine();
         for (Commodity i : set) {
-            if (inputname1.equalsIgnoreCase(i.getName())) {
+            if (inputName1.equalsIgnoreCase(i.getName())) {
                 System.out.println(i);
             }
         }

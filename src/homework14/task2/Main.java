@@ -1,11 +1,13 @@
 package homework14.task2;
 
+import java.util.LinkedHashSet;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Methods obj = new Methods();
+        SetUtils obj = new SetUtils(new LinkedHashSet<>());
         System.out.println("===============CONSOLE MENU==================\n" +
                 "1  Додати товар\n" +
                 "2  Видалити товар\n" +

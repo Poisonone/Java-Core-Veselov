@@ -1,5 +1,4 @@
 package homework14.task2;
-
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
@@ -12,7 +11,6 @@ public class Commodity {
     int height;
     int weight;
     int length;
-
     public Commodity(String name, int height, int weight, int length) {
         this.name = name;
         this.height = height;
