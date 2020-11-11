@@ -7,36 +7,30 @@ import java.lang.reflect.Method;
 public class ReflectionTest {
     static Reflect reflect;
 
-    public ReflectionTest() {
+    public ReflectionTest() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         getClassFields(reflect.getClass());
         getClassMethods(reflect.getClass());
 
         Class<?> cls = reflect.getClass();
-        try {
-            System.out.println("\n1. invoke method toString()\n");
 
-            Method method = cls.getMethod("toString");
-            System.out.println(method.invoke(reflect));
+        System.out.println("\n1. invoke method toString()\n");
 
-            Class<?>[] paramTypes;
-            Object[] args;
+        Method method = cls.getMethod("toString");
+        System.out.println(method.invoke(reflect));
 
-            paramTypes = new Class[]{int.class, String.class};
-            method = cls.getMethod("setData", paramTypes);
+        Class<?>[] paramTypes;
+        Object[] args;
 
-            args = new Object[]{(int) 123, new String("New value")};
-            method.invoke(reflect, args);
+        paramTypes = new Class[]{int.class, String.class};
+        method = cls.getMethod("setData", paramTypes);
 
-            System.out.println("\n2. invoke method toString()\n");
-            method = cls.getMethod("toString");
-            System.out.println(method.invoke(reflect));
+        args = new Object[]{(int) 123, new String("New value")};
+        method.invoke(reflect, args);
 
-        } catch (NoSuchMethodException e) {
-        } catch (SecurityException e) {
-        } catch (IllegalAccessException e) {
-        } catch (IllegalArgumentException e) {
-        } catch (InvocationTargetException e) {
-        }
+        System.out.println("\n2. invoke method toString()\n");
+        method = cls.getMethod("toString");
+        System.out.println(method.invoke(reflect));
+
     }
 
     private void getClassFields(Class<?> cls) {
@@ -64,7 +58,7 @@ public class ReflectionTest {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         reflect = new Reflect();
         new ReflectionTest();
         System.exit(0);
