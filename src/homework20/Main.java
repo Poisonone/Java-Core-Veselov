@@ -5,7 +5,9 @@ public class Main {
         MyThread myThread = new MyThread();
         MyRunnable myRunnable = new MyRunnable();
         myThread.start();
+        myThread.join();
         System.out.println("---------------------");
         new Thread(myRunnable).start();
+
     }
 }

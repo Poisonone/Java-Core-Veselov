@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class MyThread extends Thread {
     @Override
     public void run() {
+
         int n0 = 1;
         int n1 = 1;
         int n2;
