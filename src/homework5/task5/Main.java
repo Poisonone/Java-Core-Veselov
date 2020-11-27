@@ -9,10 +9,10 @@ public class Main {
         fr.walk();
         System.out.println("--------------------------------------------------");
         Frog fr1 = new Frog();
-        ((Amphibia)fr1).walk();
-        ((Amphibia)fr1).sleep();
-        ((Amphibia)fr1).eat();
-        ((Amphibia)fr1).swim();
+        (fr1).walk();
+        (fr1).sleep();
+        (fr1).eat();
+        (fr1).swim();
     }
 
 }
